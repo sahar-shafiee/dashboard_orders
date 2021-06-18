@@ -8,7 +8,7 @@ function Dashboard() {
     let browserWidth = window.innerWidth;
     return (
         <>
-            {browserWidth <= 480 ?
+            {browserWidth <= 550 ?
                 <div className="dashboardWrapper">
                     <h3 className="dashboardHeader">سفارش ها</h3>
                     <CustomTab tab={[{
@@ -22,7 +22,7 @@ function Dashboard() {
                         </div>
                     }]} />
                 </div>
-                : <h1>لطفا سایز صفحه را کوچک کنید</h1>}
+                : <h1>لطفا سایز صفحه مرورگر را کوچک کنید و مرورگر را رفرش نمایید.</h1>}
         </>
     );
 }
