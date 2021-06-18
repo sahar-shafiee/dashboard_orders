@@ -1,0 +1,66 @@
+// wrapper div
+.dashboard-card-parent{
+    background-color: #f5f6fb;
+    padding: 15px;
+    font-family: 'vazir';
+    // div cards
+    .dashboard-card-wrapper-card{
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 10px 15px;
+        // title
+        h4{
+            margin: 0px;
+        }
+        // div wrapper items
+        .wrapper-items{
+            padding: 20px 0px;
+            border-bottom: 1px solid #ced5d8;
+            // div status
+            .wrapper-status{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                :first-child{
+                    color: #5e7488;
+                }
+                // badge
+                .classNameBage{
+                    position: absolute;
+                    left: 20px;
+                }
+            }
+            // div customer
+            .wrapper-customer{
+                padding-top: 15px;
+            }
+            // div image
+            .wrapper-image{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                height: auto;
+                // image
+                img{
+                    width: 75px;
+                    height: 75px;
+                    margin-left: 10px;
+                    border-radius: 3px;
+                    margin-top: 5px;
+                }
+                // button
+                button{
+                    width: 75px;
+                    height: 75px;
+                    background-color: #e9ebeb;
+                    color: #364254;
+                    border: none;
+                    outline: none;
+                    font-family: 'vazir';
+                    border-radius: 3px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

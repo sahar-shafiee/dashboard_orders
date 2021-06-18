@@ -1,0 +1,23 @@
+// div parent label
+.parent-custom-label{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    // div labels
+    .wrapper-each-label{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        font-family: 'vazir';
+        padding-top: 10px;
+        // item label
+        .item-label{
+            color: #5e7488;
+        }
+        // item value
+        .item-value{
+            color: #333333;
+            padding: 0px 10px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// div wrapper tabs
+.custom-tab-wrapper{
+    font-family: 'vazir';
+    direction: rtl;
+    width: 100%;
+    // div titles
+    .custom-tab-wrapper-title{
+        background-color: #007aff;
+        color: #bcdbec;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // span titles
+        .custom-tab-title{
+            font-size: medium;
+            padding: 10px;
+            cursor: pointer;
+        }
+        // active span titles
+        .active-custom-tab-title{
+            color: #fff;
+            border-bottom: 3px solid #0054dc;
+        }
+
+    }
+}

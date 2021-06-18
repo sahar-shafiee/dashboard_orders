@@ -1,0 +1,13 @@
+// components
+@import './custom/badge.scss';
+@import './custom/label.scss';
+@import './custom/tab.scss';
+// pages
+@import './dashboard/index.scss';
+@import './dashboard/dashboardCard.scss';
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
