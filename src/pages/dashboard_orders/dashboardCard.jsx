@@ -1,40 +1,56 @@
 // node libraries
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // components
 import CustomBadge from '../../components/custom/customBadge/index';
 import CustomLabel from '../../components/custom/customLabel';
 // data
 import { orders } from '../../utils/orders';
-// image
-import armChair from '../../assets/image/dashboard/armChair.jpg';
-import closets from '../../assets/image/dashboard/closets.jpg';
-import library from '../../assets/image/dashboard/library.jpeg';
+// methods
+import { ApiRegister } from '../../apis/services/apiRegister/ApiRegister';
+// toast
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function DashboardCard() {
+
+    let [images, setImages] = useState([]);
+
+    useEffect(() => {
+        const _handleRequestApi = async () => {
+
+            let loadData = null;
+            let dataUrl = '/photos';
+            let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
+            setImages(response);//==> output: {}
+        }
+        _handleRequestApi();
+
+    }, []);
+
     return (
-        <div className="dashboard-card-parent">
-            <div className="dashboard-card-wrapper-card">
+        <div className="divDashboardCard">
+            <div className="divDashboardCard__div">
+                <ToastContainer />
                 <h4>سفارش های تکمیل نشده</h4>
                 {orders.length > 0 && orders.map((value, index) => {
                     return (
-                        <div key={index} className="wrapper-items">
-                            <div className="wrapper-status">
-                                <span>شماره سفارش :</span>
-                                <span>{value.orderNumber}</span>
-                                <CustomBadge title={`${value.status}`} classNameBage="classNameBage" />
+                        <div key={index} className="divCard">
+                            <div className="divCard__divHeader">
+                                <CustomLabel value={value.orderNumber} label="شماره سفارش" />
+                                <CustomBadge title={`${value.status}`} customBadgeClass="divCard__divHeader--badge" />
                             </div>
-                            <div className="wrapper-customer">
+                            <div className="divCard__customer">
                                 <span>{`${value.customerName} ${value.customerFamily} - ${value.customerProvince},${value.customerCity}`}</span>
                             </div>
-                            <CustomLabel data={[
-                                { label: "تاریخ ثبت سفارش", value: `${value.orderDate}` },
-                                { label: "مهلت ارسال سفارش", value: `${value.deadlineOrder}` },
-                                { label: "تعداد اقلام کالا", value: `${value.numberOfProductItems}` }
-                            ]} />
-                            <div className="wrapper-image">
-                                <img src={closets} alt="product" />
-                                <img src={armChair} alt="product" />
-                                <img src={library} alt="product" />
+                            <CustomLabel value={`${value.orderDate}`} label="تاریخ ثبت سفارش" /><br />
+                            <CustomLabel value={`${value.deadlineOrder}`} label="مهلت ارسال سفارش" /><br />
+                            <CustomLabel value={`${value.numberOfProductItems}`} label="تعداد اقلام کالا" /><br />
+                            <div className="divCard__image">
+                                {images && images.map((value, index) => {
+                                    return (
+                                        index < 2 && <img key={index} src={value.url} alt={`${value.title}`} />
+                                    );
+                                })}
                                 <button>مشاهده سفارش</button>
                             </div>
                         </div>

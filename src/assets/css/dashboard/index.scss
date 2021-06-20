@@ -1,12 +1,12 @@
 // div wrapper
-.dashboardWrapper{
+.divDashboard{
     display: flex;
     direction: rtl;
     font-family: 'vazir';
     flex-direction: column;
     align-items: center;
     // h3
-    .dashboardHeader{
+    .divDashboard__h3{
         width: 100%;
         height: 100px;
         display: flex;
@@ -18,7 +18,7 @@
     }
 }
 // h1
-h1{
+.h1Dashboard{
     width: 100%;
     font-family: 'vazir';
     text-align: center;

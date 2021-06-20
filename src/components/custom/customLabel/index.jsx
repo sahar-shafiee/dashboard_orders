@@ -3,37 +3,29 @@ import React from 'react';
 
 /**
  * component of custom badge
- * @param {array} data => array of object
- * @param {string} classNameParent => class name of div parent
- * @param {string} classNameWrapperLabels => class name of div wrapper of labels
- * @param {string} classNameItemLabel => class name of span label
- * @param {string} classNameItemValue => class name of span value
+ * @param {string} value => value of label
+ * @param {string} label => label of label
+ * @param {string} customLabelDiv => class name of div wrapper of labels
+ * @param {string} customLabel => class name of span label
+ * @param {string} customValue => class name of span value
  */
 function CustomLabel({
-    data,
-    classNameParent,
-    classNameWrapperLabels,
-    classNameItemLabel,
-    classNameItemValue
+    value,
+    label,
+    customLabelDiv,
+    customLabel,
+    customValue
 }) {
     return (
         <div className=
-            {`parent-custom-label ${classNameParent !== undefined && classNameParent}`}
+            {`divLabel ${customLabelDiv !== undefined && customLabelDiv}`}
         >
-            {data.length > 0 && data.map((value, index) => {
-                return (
-                    <div key={index} className=
-                        {`wrapper-each-label ${classNameWrapperLabels !== undefined && classNameWrapperLabels}`}
-                    >
-                        <span className={`item-label ${classNameItemLabel !== undefined && classNameItemLabel}`}>
-                            {value.label}:
-                        </span>
-                        <span className={`item-value ${classNameItemValue !== undefined && classNameItemValue}`}>
-                            {value.value}
-                        </span>
-                    </div>
-                )
-            })}
+            <span className={`divLabel__span--label ${customLabel !== undefined && customLabel}`}>
+                {label}:
+            </span>
+            <span className={`divLabel__span--value ${customValue !== undefined && customValue}`}>
+                {value}
+            </span>
         </div>
     );
 }

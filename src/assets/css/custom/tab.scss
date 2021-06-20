@@ -1,23 +1,26 @@
 // div wrapper tabs
-.custom-tab-wrapper{
+.divCustomTab{
     font-family: 'vazir';
     direction: rtl;
     width: 100%;
     // div titles
-    .custom-tab-wrapper-title{
+    &__div{
         background-color: #007aff;
-        color: #bcdbec;
         display: flex;
         flex-direction: row;
         justify-content: center;
         // span titles
-        .custom-tab-title{
+        &--title{
             font-size: medium;
             padding: 10px;
             cursor: pointer;
+            width: 100%;
+            text-align: center;
+            border: none;
+            color: #98dbff;
         }
         // active span titles
-        .active-custom-tab-title{
+        &--titleActive{
             color: #fff;
             border-bottom: 3px solid #0054dc;
         }

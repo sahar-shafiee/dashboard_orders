@@ -5,45 +5,45 @@ import { clickOnTabs } from './methods/clickOnTabs';
 
 /**
  * component of custom badge
- * @param {array} tab => array of object
- * @param {string} classNameCustomTabWrapper => class name custom tab wrapper
- * @param {string} classNameCustomTabWrapperTitle => class name custom tab wrapper title
- * @param {string} classNameCustomTabTitle => class name custom tab title
- * @param {string} classNameCustomTabWrapperContent => class name custom tab wrapper content
- * @param {string} classNameCustomTabContent => class name custom tab content
+ * @param {array} tab => array of object each object have title and content
+ * @param {string} customTabClassWrapper => class name custom tab wrapper
+ * @param {string} customTabClassWrapperTitle => class name custom tab wrapper title
+ * @param {string} customTabClassTitle => class name custom tab title
+ * @param {string} customTabClassWrapperContent => class name custom tab wrapper content
+ * @param {string} customTabClassContent => class name custom tab content
  */
 function CustomTab({
     tab,
-    classNameCustomTabWrapper,
-    classNameCustomTabWrapperTitle,
-    classNameCustomTabTitle,
-    classNameCustomTabWrapperContent,
-    classNameCustomTabContent
+    customTabClassWrapper,
+    customTabClassWrapperTitle,
+    customTabClassTitle,
+    customTabClassWrapperContent,
+    customTabClassContent
 }) {
     let [activeTab, setActiveTab] = useState("");
 
     useEffect(() => {
-        setActiveTab("تکمیل نشده");
-    }, []);
+        setActiveTab(tab[0].title);
+    }, [tab]);
 
     return (
         <div
             className={
-                `custom-tab-wrapper 
-                ${classNameCustomTabWrapper !== undefined && classNameCustomTabWrapper}`
+                `divCustomTab
+                ${customTabClassWrapper !== undefined && customTabClassWrapper}`
             }>
             <div
                 className={
-                    `custom-tab-wrapper-title 
-                    ${classNameCustomTabWrapperTitle !== undefined && classNameCustomTabWrapperTitle}`
+                    `divCustomTab__div
+                    ${customTabClassWrapperTitle !== undefined && customTabClassWrapperTitle}`
                 }>
                 {tab.length > 0 && tab.map((value, index) => {
                     return (
                         <span key={index}
                             className={
-                                `custom-tab-title
-                                ${activeTab.length > 0 && 'active-custom-tab-title'}
-                            ${classNameCustomTabTitle !== undefined && classNameCustomTabTitle}`
+                                `divCustomTab__div--title
+                                ${activeTab === value.title && 'divCustomTab__div--titleActive'}
+                            ${customTabClassTitle !== undefined && customTabClassTitle}`
                             } onClick={(event) => {
                                 setActiveTab(value.title);
                                 clickOnTabs(event);
@@ -54,15 +54,13 @@ function CustomTab({
             </div>
             <div
                 className={
-                    `custom-tab-wrapper-content 
-                    ${classNameCustomTabWrapperContent !== undefined && classNameCustomTabWrapperContent}`
+                    `${customTabClassWrapperContent !== undefined && customTabClassWrapperContent}`
                 }>
                 {tab.length > 0 && tab.map((value, index) => {
                     return (
                         <div key={index}
                             className={
-                                `custom-tab-content 
-                                ${classNameCustomTabContent !== undefined && classNameCustomTabContent}`
+                                `${customTabClassContent !== undefined && customTabClassContent}`
                             }>
                             {activeTab === value.title && value.content}
                         </div>);

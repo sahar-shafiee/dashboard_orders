@@ -1,10 +1,10 @@
 // wrapper div
-.dashboard-card-parent{
+.divDashboardCard{
     background-color: #f5f6fb;
     padding: 15px;
     font-family: 'vazir';
     // div cards
-    .dashboard-card-wrapper-card{
+    &__div{
         border-radius: 10px;
         background-color: #fff;
         padding: 10px 15px;
@@ -12,12 +12,12 @@
         h4{
             margin: 0px;
         }
-        // div wrapper items
-        .wrapper-items{
+        // div wrapper cards
+        .divCard{
             padding: 20px 0px;
             border-bottom: 1px solid #ced5d8;
             // div status
-            .wrapper-status{
+            &__divHeader{
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -25,17 +25,17 @@
                     color: #5e7488;
                 }
                 // badge
-                .classNameBage{
+                &--badge{
                     position: absolute;
                     left: 20px;
                 }
             }
             // div customer
-            .wrapper-customer{
+            &__customer{
                 padding-top: 15px;
             }
             // div image
-            .wrapper-image{
+            &__image{
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
@@ -59,6 +59,7 @@
                     font-family: 'vazir';
                     border-radius: 3px;
                     margin-top: 5px;
+                    cursor: pointer;
                 }
             }
         }

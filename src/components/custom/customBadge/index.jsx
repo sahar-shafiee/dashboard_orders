@@ -4,25 +4,29 @@ import React from 'react';
 /**
  * component of custom badge
  * @param {string} title => title badge
- * @param {string} classNameBage => className for badge text
- * @param {string} color => color for badge text
+ * @param {string} customBadgeClass => className for badge text
+ * @param {string} customBadgeStyle => style for badge text
  * @param {string} backgroundColor => background color for badge text
- * @param {string} fontSize => font size for badge text
+ * @param {string} color => color for badge text
+ * @param {string} otherProps => other props
  */
 function CustomBadge({
     title,
-    classNameBage,
-    color,
+    customBadgeClass,
+    customBadgeStyle,
     backgroundColor,
-    fontSize
+    color,
+    otherProps
 }) {
     return (
-        <span className={`custom-badge-span ${classNameBage !== undefined && classNameBage}`}
+        <span className={`customBadge__span 
+        ${customBadgeClass !== undefined && customBadgeClass}`}
             style={{
-                color: `${color !== undefined && color}`,
-                backgroundColor: `${backgroundColor !== undefined && backgroundColor}`,
-                fontSize: `${fontSize !== undefined && fontSize}`
+                backgroundColor: backgroundColor,
+                color: color,
+                ...customBadgeStyle
             }}
+            {...otherProps}
         >
             {title}
         </span>

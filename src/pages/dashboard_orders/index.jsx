@@ -9,8 +9,8 @@ function Dashboard() {
     return (
         <>
             {browserWidth <= 550 ?
-                <div className="dashboardWrapper">
-                    <h3 className="dashboardHeader">سفارش ها</h3>
+                <div className="divDashboard">
+                    <h3 className="divDashboard__h3">سفارش ها</h3>
                     <CustomTab tab={[{
                         title: "تکمیل نشده",
                         content: <DashboardCard />
@@ -22,7 +22,7 @@ function Dashboard() {
                         </div>
                     }]} />
                 </div>
-                : <h1>لطفا سایز صفحه مرورگر را کوچک کنید و مرورگر را رفرش نمایید.</h1>}
+                : <h1 className="h1Dashboard">لطفا سایز صفحه مرورگر را کوچک کنید و مرورگر را رفرش نمایید.</h1>}
         </>
     );
 }
