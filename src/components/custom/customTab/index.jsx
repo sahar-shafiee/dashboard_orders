@@ -12,14 +12,14 @@ import { clickOnTabs } from './methods/clickOnTabs';
  * @param {string} customTabClassWrapperContent => class name custom tab wrapper content
  * @param {string} customTabClassContent => class name custom tab content
  */
-function CustomTab({
+const CustomTab = ({
     tab,
     customTabClassWrapper,
     customTabClassWrapperTitle,
     customTabClassTitle,
     customTabClassWrapperContent,
     customTabClassContent
-}) {
+}) => {
     let [activeTab, setActiveTab] = useState("");
 
     useEffect(() => {
@@ -29,19 +29,19 @@ function CustomTab({
     return (
         <div
             className={
-                `divCustomTab
+                `customTab
                 ${customTabClassWrapper !== undefined && customTabClassWrapper}`
             }>
             <div
                 className={
-                    `divCustomTab__div
+                    `customTab__div
                     ${customTabClassWrapperTitle !== undefined && customTabClassWrapperTitle}`
                 }>
                 {tab.length > 0 && tab.map((value, index) => {
                     return (
                         <span key={index}
                             className={
-                                `divCustomTab__div--title
+                                `customTab__div--title
                                 ${activeTab === value.title && 'divCustomTab__div--titleActive'}
                             ${customTabClassTitle !== undefined && customTabClassTitle}`
                             } onClick={(event) => {
@@ -70,4 +70,4 @@ function CustomTab({
     );
 }
 // export
-export default CustomTab;
+export { CustomTab };

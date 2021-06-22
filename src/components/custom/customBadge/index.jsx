@@ -10,16 +10,16 @@ import React from 'react';
  * @param {string} color => color for badge text
  * @param {string} otherProps => other props
  */
-function CustomBadge({
+const CustomBadge = ({
     title,
     customBadgeClass,
     customBadgeStyle,
     backgroundColor,
     color,
     otherProps
-}) {
+}) => {
     return (
-        <span className={`customBadge__span 
+        <span className={`customBadge
         ${customBadgeClass !== undefined && customBadgeClass}`}
             style={{
                 backgroundColor: backgroundColor,
@@ -33,4 +33,4 @@ function CustomBadge({
     );
 }
 // export
-export default CustomBadge;
+export { CustomBadge };

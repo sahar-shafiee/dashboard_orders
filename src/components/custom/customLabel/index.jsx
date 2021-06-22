@@ -9,25 +9,25 @@ import React from 'react';
  * @param {string} customLabel => class name of span label
  * @param {string} customValue => class name of span value
  */
-function CustomLabel({
+const CustomLabel = ({
     value,
     label,
     customLabelDiv,
     customLabel,
     customValue
-}) {
+}) => {
     return (
         <div className=
-            {`divLabel ${customLabelDiv !== undefined && customLabelDiv}`}
+            {`label ${customLabelDiv !== undefined && customLabelDiv}`}
         >
-            <span className={`divLabel__span--label ${customLabel !== undefined && customLabel}`}>
+            <span className={`label__span--label ${customLabel !== undefined && customLabel}`}>
                 {label}:
             </span>
-            <span className={`divLabel__span--value ${customValue !== undefined && customValue}`}>
+            <span className={`label__span--value ${customValue !== undefined && customValue}`}>
                 {value}
             </span>
         </div>
     );
 }
 // export
-export default CustomLabel;
+export { CustomLabel };

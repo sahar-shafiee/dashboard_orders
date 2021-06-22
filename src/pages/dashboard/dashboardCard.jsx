@@ -1,15 +1,11 @@
 // node libraries
 import React, { useEffect, useState } from 'react';
 // components
-import CustomBadge from '../../components/custom/customBadge/index';
-import CustomLabel from '../../components/custom/customLabel';
+import { CustomBadge, CustomLabel } from '../../components';
 // data
 import { orders } from '../../utils/orders';
 // methods
 import { ApiRegister } from '../../apis/services/apiRegister/ApiRegister';
-// toast
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function DashboardCard() {
 
@@ -19,7 +15,7 @@ function DashboardCard() {
         const _handleRequestApi = async () => {
 
             let loadData = null;
-            let dataUrl = '/photos';
+            let dataUrl = '/app/api/get-login-user/';
             let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
             setImages(response);//==> output: {}
         }
@@ -28,24 +24,23 @@ function DashboardCard() {
     }, []);
 
     return (
-        <div className="divDashboardCard">
-            <div className="divDashboardCard__div">
-                <ToastContainer />
+        <div className="dashboardCard">
+            <div className="dashboardCard__div">
                 <h4>سفارش های تکمیل نشده</h4>
                 {orders.length > 0 && orders.map((value, index) => {
                     return (
-                        <div key={index} className="divCard">
-                            <div className="divCard__divHeader">
+                        <div key={index} className="card">
+                            <div className="card__header">
                                 <CustomLabel value={value.orderNumber} label="شماره سفارش" />
-                                <CustomBadge title={`${value.status}`} customBadgeClass="divCard__divHeader--badge" />
+                                <CustomBadge title={`${value.status}`} customBadgeClass="card__header--badge" />
                             </div>
-                            <div className="divCard__customer">
+                            <div className="card__customer">
                                 <span>{`${value.customerName} ${value.customerFamily} - ${value.customerProvince},${value.customerCity}`}</span>
                             </div>
                             <CustomLabel value={`${value.orderDate}`} label="تاریخ ثبت سفارش" /><br />
                             <CustomLabel value={`${value.deadlineOrder}`} label="مهلت ارسال سفارش" /><br />
                             <CustomLabel value={`${value.numberOfProductItems}`} label="تعداد اقلام کالا" /><br />
-                            <div className="divCard__image">
+                            <div className="card__image">
                                 {images && images.map((value, index) => {
                                     return (
                                         index < 2 && <img key={index} src={value.url} alt={`${value.title}`} />

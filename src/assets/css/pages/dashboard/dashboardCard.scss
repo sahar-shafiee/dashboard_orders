@@ -1,5 +1,5 @@
 // wrapper div
-.divDashboardCard{
+.dashboardCard{
     background-color: #f5f6fb;
     padding: 15px;
     font-family: 'vazir';
@@ -13,11 +13,11 @@
             margin: 0px;
         }
         // div wrapper cards
-        .divCard{
+        .card{
             padding: 20px 0px;
             border-bottom: 1px solid #ced5d8;
             // div status
-            &__divHeader{
+            &__header{
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
