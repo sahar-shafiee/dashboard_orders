@@ -1,5 +1,6 @@
 // export components
 export * from './custom/customBadge';
+export * from './custom/customBreadcrumbs';
 export * from './custom/customButton';
 export * from './custom/customDivNote';
 export * from './custom/customDropDown';
@@ -16,3 +17,4 @@ export * from './custom/customSliderProduct';
 export * from './custom/customSwitchButton';
 export * from './custom/customTab'
 export * from './custom/customTable';
+export * from './productImages';

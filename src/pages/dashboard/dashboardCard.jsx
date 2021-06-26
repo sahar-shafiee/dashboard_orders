@@ -15,7 +15,8 @@ function DashboardCard() {
         const _handleRequestApi = async () => {
 
             let loadData = null;
-            let dataUrl = '/app/api/get-login-user/';
+            // let dataUrl = '/app/api/get-login-user/';
+            let dataUrl = '/photos';
             let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
             setImages(response);//==> output: {}
         }

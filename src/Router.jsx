@@ -8,6 +8,7 @@ import { JwtDecode } from './utils/jwt/JwtDecode';
 // import { signoutService } from './apis/services/userServices';
 // components
 import Dashboard from './pages/dashboard';
+import Details from './pages/productDetails/details';
 // toast
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,6 +37,7 @@ function Router() {
         <ToastContainer />
         <Switch>
           <Route exact path="/" render={() => <Dashboard />} />
+          <Route path="/product-details" component={Details} />
         </Switch>
       </BrowserRouter>
     </Provider>

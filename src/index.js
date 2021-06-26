@@ -4,6 +4,7 @@ import Router from './Router';
 import reportWebVitals from './reportWebVitals';
 // sass
 import './assets/css/all.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
