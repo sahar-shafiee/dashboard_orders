@@ -8,6 +8,7 @@ function Dashboard() {
     let browserWidth = window.innerWidth;
     return (
         <>
+        
             {browserWidth <= 550 ?
                 <div className="dashboard">
                     <h3 className="dashboard__h3">سفارش ها</h3>
