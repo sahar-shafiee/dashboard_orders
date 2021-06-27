@@ -1,0 +1,343 @@
+/*fonts of page is vazir */
+@font-face {
+  font-family: 'vazir';
+  src: url("./Vazir.eot") format("eot"), url("./Vazir.woff") format("woff"), url("./Vazir.ttf") format("ttf");
+  font-style: normal;
+  font-display: fallback;
+}
+
+.customBadge {
+  display: inline-block;
+  color: #0054dc;
+  background-color: #d0edfe;
+  padding: 5px 8px;
+  font-family: 'vazir';
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.label {
+  display: inline-block;
+  direction: rtl;
+  font-family: 'vazir';
+  padding-top: 10px;
+}
+
+.label__span--label {
+  color: #5e7488;
+}
+
+.label__span--value {
+  color: #333333;
+  padding: 0px 10px;
+}
+
+.customTab {
+  font-family: 'vazir';
+  direction: rtl;
+  width: 100%;
+}
+
+.customTab__div {
+  background-color: #007aff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.customTab__div--title {
+  font-size: medium;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: #98dbff;
+}
+
+.customTab__div--titleActive {
+  color: #fff;
+  border-bottom: 3px solid #0054dc;
+}
+
+.container {
+  width: 100%;
+  margin: 17px 0px 17px 0;
+  padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+  border-radius: 0.2vw;
+  -webkit-box-shadow: 0 1px 3.5px 0 rgba(40, 167, 69, 0.25);
+          box-shadow: 0 1px 3.5px 0 rgba(40, 167, 69, 0.25);
+  background-color: #28a745;
+  color: white;
+  font-size: 20px;
+}
+
+.slider_product_Image {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 3.5px;
+  background-color: white;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.slider_product_thumbNail {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+.slider_product img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 3.5px;
+  background-color: white;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.slider_product_thambnail_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.5vw;
+}
+
+.slider_thumbnail_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.slider_thumbnail_box img {
+  width: 20%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 3.5px;
+  background-color: gray;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  margin-left: 0.4vw;
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: rtl;
+  font-family: 'vazir';
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .dashboard__h3 {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #007aff;
+  color: #fff;
+  margin: 0px;
+}
+
+.dashboard__h1 {
+  width: 100%;
+  font-family: 'vazir';
+  text-align: center;
+}
+
+.dashboardCard {
+  background-color: #f5f6fb;
+  padding: 15px;
+  font-family: 'vazir';
+}
+
+.dashboardCard__div {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px 15px;
+}
+
+.dashboardCard__div h4 {
+  margin: 0px;
+}
+
+.dashboardCard__div .card {
+  padding: 20px 0px;
+  border-bottom: 1px solid #ced5d8;
+}
+
+.dashboardCard__div .card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboardCard__div .card__header :first-child {
+  color: #5e7488;
+}
+
+.dashboardCard__div .card__header--badge {
+  position: absolute;
+  left: 20px;
+}
+
+.dashboardCard__div .card__customer {
+  padding-top: 15px;
+}
+
+.dashboardCard__div .card__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+}
+
+.dashboardCard__div .card__image img {
+  width: 75px;
+  height: 75px;
+  margin-left: 10px;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.dashboardCard__div .card__image button {
+  width: 75px;
+  height: 75px;
+  background-color: #e9ebeb;
+  color: #364254;
+  border: none;
+  outline: none;
+  font-family: 'vazir';
+  border-radius: 3px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.content-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ececec;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+/* right menu */
+.right-menu {
+  margin-left: 20px;
+  height: 200px;
+  min-height: 200px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.side-menu-containe {
+  width: 19vw;
+  min-width: 220px;
+}
+
+/* content */
+.content {
+  width: 65vw;
+  max-width: 75rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.box {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.icon-size {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+.text-filed-helper {
+  color: #7d7d7d;
+  margin-top: 5px;
+}
+
+.small-text {
+  font-size: small;
+}
+
+.p {
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+/*# sourceMappingURL=all.css.map */

@@ -1,0 +1,35 @@
+.customTab {
+  font-family: 'vazir';
+  direction: rtl;
+  width: 100%;
+}
+
+.customTab__div {
+  background-color: #007aff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.customTab__div--title {
+  font-size: medium;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: #98dbff;
+}
+
+.customTab__div--titleActive {
+  color: #fff;
+  border-bottom: 3px solid #0054dc;
+}
+/*# sourceMappingURL=tab.css.map */

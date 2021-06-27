@@ -1,0 +1,16 @@
+.label {
+  display: inline-block;
+  direction: rtl;
+  font-family: 'vazir';
+  padding-top: 10px;
+}
+
+.label__span--label {
+  color: #5e7488;
+}
+
+.label__span--value {
+  color: #333333;
+  padding: 0px 10px;
+}
+/*# sourceMappingURL=label.css.map */

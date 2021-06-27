@@ -7,7 +7,9 @@ import { store } from './redux/store';
 import { JwtDecode } from './utils/jwt/JwtDecode';
 // import { signoutService } from './apis/services/userServices';
 // components
-import Dashboard from './pages/dashboard';
+// import DashboardM from './pages/dashboard';
+import { DashboardM } from './pages/DashboardM/DashboardM';
+import { DashboardMain } from './pages/DashboardM/DashBoardMain/DashboardMain';
 // toast
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -34,9 +36,9 @@ function Router() {
 
       <BrowserRouter>
         <ToastContainer />
-        <Switch>
-          <Route exact path="/" render={() => <Dashboard />} />
-        </Switch>
+        <DashboardM>
+          <Route exact path="/" render={() => <DashboardM />} />
+        </DashboardM>
       </BrowserRouter>
     </Provider>
   );

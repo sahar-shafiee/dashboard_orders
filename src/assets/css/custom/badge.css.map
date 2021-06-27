@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,2BAA2B;AAC3B,UAAU;EACR,WAAW,EAAE,OAAO;EACpB,GAAG,EAAG,kBAAkB,CAAC,aAAa,EAChC,mBAAmB,CAAC,cAAc,EAClC,kBAAkB,CAAC,aAAa;EACtC,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,QAAQ;;;ADLxB,AAAA,YAAY,CAAA;EACR,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,OAAO;EACd,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,OAAO;EAChB,WAAW,EAAE,OAAO;EACpB,SAAS,EAAE,MAAM;EACjB,aAAa,EAAE,GAAG;CACrB",
+    "sources": [
+        "badge.scss",
+        "../../fonts/_font.scss"
+    ],
+    "names": [],
+    "file": "badge.css"
+}

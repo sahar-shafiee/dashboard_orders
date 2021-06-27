@@ -1,0 +1,79 @@
+.dashboardCard {
+  background-color: #f5f6fb;
+  padding: 15px;
+  font-family: 'vazir';
+}
+
+.dashboardCard__div {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px 15px;
+}
+
+.dashboardCard__div h4 {
+  margin: 0px;
+}
+
+.dashboardCard__div .card {
+  padding: 20px 0px;
+  border-bottom: 1px solid #ced5d8;
+}
+
+.dashboardCard__div .card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboardCard__div .card__header :first-child {
+  color: #5e7488;
+}
+
+.dashboardCard__div .card__header--badge {
+  position: absolute;
+  left: 20px;
+}
+
+.dashboardCard__div .card__customer {
+  padding-top: 15px;
+}
+
+.dashboardCard__div .card__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+}
+
+.dashboardCard__div .card__image img {
+  width: 75px;
+  height: 75px;
+  margin-left: 10px;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.dashboardCard__div .card__image button {
+  width: 75px;
+  height: 75px;
+  background-color: #e9ebeb;
+  color: #364254;
+  border: none;
+  outline: none;
+  font-family: 'vazir';
+  border-radius: 3px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=dashboardCard.css.map */

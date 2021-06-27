@@ -1,0 +1,18 @@
+/*fonts of page is vazir */
+@font-face {
+  font-family: 'vazir';
+  src: url("./Vazir.eot") format("eot"), url("./Vazir.woff") format("woff"), url("./Vazir.ttf") format("ttf");
+  font-style: normal;
+  font-display: fallback;
+}
+
+.customBadge {
+  display: inline-block;
+  color: #0054dc;
+  background-color: #d0edfe;
+  padding: 5px 8px;
+  font-family: 'vazir';
+  font-size: medium;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=badge.css.map */
