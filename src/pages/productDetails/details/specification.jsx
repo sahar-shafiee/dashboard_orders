@@ -14,6 +14,7 @@ const Specification = ({ product }) => {
                 <CustomLabel value={`${product && product.length > 0 && product[0].weight_with_packing}`} label="وزن" /><br />
                 <CustomLabel value={`${product && product.length > 0 && product[0].length_with_packing}`} label="تعداد" /><br />
                 <CustomLabel value={`${product && product.length > 0 && product[0].attributes[0].value}`} label="رنگ" /><br />
+                <CustomLabel value={`${product && product.length > 0 && product[0].description}`} label="توضیحات" /><br />
             </div>
         </div>
     )

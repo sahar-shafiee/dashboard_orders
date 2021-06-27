@@ -6,7 +6,7 @@ const CustomDropDown = (props) => {
 
 
   const [selectedOption, setSelectedOption] = useState(null);
-  const [options, setOptions] = useState(props.entity ? [{ value: 'chocolate2', label: 'Chocolate2' },] : props.options);
+  // const [options, setOptions] = useState(props.entity ? [{ value: 'chocolate2', label: 'Chocolate2' },] : props.options);
 
   /**
    * 
@@ -22,7 +22,7 @@ const CustomDropDown = (props) => {
     <Select
       {...props}
       className={`dropDown ${props.className}`}
-      options={options}
+      // options={options}
       value={selectedOption}
       onChange={handleChange}
     />

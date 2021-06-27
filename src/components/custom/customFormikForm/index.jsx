@@ -14,7 +14,7 @@ const CustomFormikForm = ({
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        {({}) => children}
+        {children}
       </Formik>
     </Fragment>
   );

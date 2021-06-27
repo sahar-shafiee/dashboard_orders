@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 // component
 import Modal from './modal';
 import ShowImages from './showImages';
+// methods
+import { largeImage } from './methods/largeImage';
 /**
  * component of pruduct images
  * @param {string} productTitle => product Title
@@ -20,12 +22,21 @@ const ProductImages = ({
     return (
         <>
             <div className="col-12 firstImage">
-                <img src={`https://nakhll.com${originalPhoto}`} alt={`${productTitle}`} />
+                <img id="orginal" src={`https://nakhll.com${originalPhoto}`} alt={`${productTitle}`} />
             </div>
             <div className="col-12 imagesAlbum">
-                {thumbnailImages !== undefined && thumbnailImages.map((value, index) => {
+                <img id="orginal" src={`https://nakhll.com${originalPhoto}`} alt={`${productTitle}`}
+                    onClick={(event) => {
+                        largeImage(event.target.id);
+                    }}
+                />
+                {thumbnailImages && thumbnailImages.length > 0 && thumbnailImages.map((value, index) => {
                     return (
-                        <img key={index} src={`https://nakhll.com${value.image}`} alt={`${productTitle}`} />
+                        <img key={index} id={`image${index}`} src={`https://nakhll.com${value.image}`} alt={`${productTitle}`}
+                            onClick={(event) => {
+                                largeImage(event.target.id);
+                            }}
+                        />
                     );
                 })}
                 <button type="button" onClick={() => {
@@ -34,7 +45,7 @@ const ProductImages = ({
             </div>
             <Modal show={showModal} onClose={() => {
                 setShowModal(showModal => !showModal);
-            }} content={<ShowImages productTitle={productTitle} OriginalPhoto={originalPhoto} thumbnailImages={thumbnailImages} />} />
+            }} content={<ShowImages productTitle={productTitle} originalPhoto={originalPhoto} thumbnailImages={thumbnailImages} />} />
         </>
     );
 }

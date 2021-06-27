@@ -1,3 +1,4 @@
+@import './comments.scss';
 // div wrapper
 .wrapperDetails{
     width: 100%;
@@ -10,6 +11,17 @@
         margin: auto;
         background-color: #fff;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        .starRating{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 26px;
+            span{
+                font-size: 14px;
+                padding: 0px 10px;
+                color: #8d8d8d;
+            }
+        }
         .span{
             -webkit-text-decoration-line: line-through; /* Safari */
             text-decoration-line: line-through; 
@@ -28,9 +40,9 @@
             font-size: medium;
         }
         .colorProduct{
-            width: 60px;
+            width: max-content;
             text-align: center;
-            padding: 5px;
+            padding: 5px 10px;
             border: 1px solid #10ace7;
             border-radius: 3px;
         }

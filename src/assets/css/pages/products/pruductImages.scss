@@ -1,4 +1,5 @@
 @import './modal.scss';
+@import './imagesInModal.scss';
 .productImage{
             .firstImage{
                 img{
@@ -14,6 +15,7 @@
                     height: 65px;
                     border-radius: 5px;
                     margin-left: 8px;
+                    cursor: pointer;
                 }
                 button{
                     width: 65px;

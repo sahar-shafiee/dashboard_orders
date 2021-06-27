@@ -1,8 +1,7 @@
 // node libraries
 import React from 'react';
 import { Link } from 'react-router-dom';
-// image
-// import starRate from '../../../assets/image/product/starRate.jpg';
+import StarRatingComponent from 'react-star-rating-component';
 
 const Comments = ({ product }) => {
 
@@ -12,9 +11,19 @@ const Comments = ({ product }) => {
     let id = params.get('id');
 
     return (
-        <div className="row mt-5">
+        <div className="row mt-5 commentsWrapper">
             <div className="colFirst col-3 d-flex flex-column">
-                <img src="" alt="star rate" />
+                <span><strong> 4 </strong><small>از 5</small></span>
+                <div className="starRating">
+                    <StarRatingComponent
+                        name="rateProduct"
+                        editing={false}
+                        starCount={5}
+                        value={4}
+                        emptyStarColor={"#888888"}
+                    />
+                    <span>{`${product && product.length > 0 && product[0].comments.length} دیدگاه`}</span>
+                </div>
                 <span>کیفیت محصول</span>
                 <input type="range" name="quality" value="0" />
                 <span>بسته بندی</span>

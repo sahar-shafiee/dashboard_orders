@@ -19,15 +19,15 @@ const CustomBreadcrumbs = ({
         ${customClassWrapper !== undefined && customClassWrapper}`}>
             <Link to="/" className={`${customClassSpan !== undefined && customClassSpan}`}>خانه</Link>
             <span>{`>`}</span>
-            <Link to={`${titles && titles.length > 0 && titles[0].market.url}`} className={`${customClassSpan !== undefined && customClassSpan}`}>
+            <Link to={`https://nakhll.com${titles && titles.length > 0 && titles[0].market.url}`} className={`${customClassSpan !== undefined && customClassSpan}`}>
                 {titles && titles.length > 0 && titles[0].market.title}
             </Link>
             <span>{`>`}</span>
-            <Link to={`${titles && titles.length > 0 && titles[1].url}`} className={`${customClassSpan !== undefined && customClassSpan}`}>
+            <Link to={`https://nakhll.com${titles && titles.length > 0 && titles[1].url}`} className={`${customClassSpan !== undefined && customClassSpan}`}>
                 {titles && titles.length > 0 && titles[1].title}
             </Link>
             <span>{`>`}</span>
-            <Link to={`${titles && titles.length > 0 && titles[0].url}`} className={`${customClassSpan !== undefined && customClassSpan}`}>
+            <Link to={`https://nakhll.com${titles && titles.length > 0 && titles[0].url}`} className={`${customClassSpan !== undefined && customClassSpan}`}>
                 {titles && titles.length > 0 && titles[0].title}
             </Link>
         </div>

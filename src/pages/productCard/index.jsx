@@ -29,20 +29,18 @@ const ProductCard = ({
   let cardImg = (
     <img
       src={product.imageUrl}
-      className={`card-img-top _product_card_rounded ${
-        product.unavailable && "_unavailable_product"
-      }`}
+      className={`card-img-top _product_card_rounded ${product.unavailable && "_unavailable_product"
+        }`}
       alt={product.title}
     />
   );
 
   return (
     <div
-      className={`${
-        col
+      className={`${col
           ? `col-${col}`
           : `col-sm-${sm} col-md-${md} col-lg-${lg} col-xl-${xl}`
-      } mb-3`}
+        } mb-3`}
     >
       <div className="card _product_card _product_card_rounded p-2">
         {cardBadge}
@@ -58,9 +56,8 @@ const ProductCard = ({
         )}
 
         <div
-          className={`card-body mt-2 p-1 ${
-            product.unavailable && "_unavailable_product"
-          }`}
+          className={`card-body mt-2 p-1 ${product.unavailable && "_unavailable_product"
+            }`}
         >
           <div className=" mb-3">
             {linkType === "anchor" ? (

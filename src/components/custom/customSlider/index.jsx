@@ -8,9 +8,9 @@ SwiperCore.use([Navigation]);
 const CustomSlider = ({ data = [], ...otherSwiperProps }) => {
   return (
     <Fragment>
-      <div style={{ padding: "5.5px 8.5px 17px 0", borderRadius: "2.5px", background: "#ffffff" }}>
+      {/* <div style={{ padding: "5.5px 8.5px 17px 0", borderRadius: "2.5px", background: "#ffffff" }}>
         {/* <section style={{ display: "flex", margin: " 2rem", alignItems: "center" }}> */}
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ padding: "10px" }}>
             <span>برنج شالیزار</span>
           </div>
@@ -21,7 +21,7 @@ const CustomSlider = ({ data = [], ...otherSwiperProps }) => {
           </a>
 
         </div>
-        <div>
+        <div> */} 
           <Swiper
             breakpoints={{
               576: {
@@ -39,15 +39,15 @@ const CustomSlider = ({ data = [], ...otherSwiperProps }) => {
             allowSlideNext={true}
             {...otherSwiperProps}
           >
-            {data?.map((slide, index) => (
+            {data.length > 0 && data?.map((slide, index) => (
               <SwiperSlide key={`slide-${index}`}>{slide}</SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        {/* </div>
 
         {/* </section> */}
 
-      </div>
+      {/* </div>  */}
 
     </Fragment >
   );
