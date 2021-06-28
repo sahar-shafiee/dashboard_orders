@@ -7,28 +7,30 @@ import {
   NavLink,
   BrowserRouter,
 } from "react-router-dom";
+
 import "./DashboardM.css";
+
 import { DashboardMain } from "./DashBoardMain/DashboardMain";
 
 export const DashboardM = () => {
-    function Users() {
-        return <h2>Users</h2>;
-      }
-      function Buy() {
-        return <h2>Buy</h2>;
-      }
-      function Product() {
-        return <h2>Product</h2>;
-      }
-      function Customer() {
-        return <h2>customer</h2>;
-      }
-      function Customer() {
-        return <h2>Customer</h2>;
-      }
+  function Users() {
+    return <h2>Users</h2>;
+  }
+  function Buy() {
+    return <h2>Buy</h2>;
+  }
+  function Product() {
+    return <h2>Product</h2>;
+  }
+  function Customer() {
+    return <h2>customer</h2>;
+  }
+  function Customer() {
+    return <h2>Customer</h2>;
+  }
   return (
     <div className="wrapper">
-      {/* <!-- Right --> */}
+      {/* <!-- Right  SideBar--> */}
       <div className="Right">
         <section className="info-card">
           <div className="info-card-pic"></div>
@@ -73,7 +75,7 @@ export const DashboardM = () => {
             to="/buy"
           >
             <i className="fas fa-shopping-basket fa-2x"></i>
-            <h2>سفارش ها</h2>
+            <h2>سفارشات</h2>
           </NavLink>
           <NavLink
             className="menu-card-item"
@@ -81,10 +83,10 @@ export const DashboardM = () => {
             to="/product"
           >
             <i className="fas fa-box-open fa-2x"></i>
-            <h2>محصول ها</h2>
+            <h2>محصولات</h2>
           </NavLink>
           <NavLink
-            className="menu-card-item"
+            className="menu-card-item non-item"
             activeClassName="selectNav"
             to="/customer"
           >
@@ -92,7 +94,7 @@ export const DashboardM = () => {
             <h2>لیست مشتریان</h2>
           </NavLink>
           <NavLink
-            className="menu-card-item"
+            className="menu-card-item non-item"
             activeClassName="selectNav"
             to="/Comments"
           >
@@ -108,7 +110,7 @@ export const DashboardM = () => {
             <h2>مالی</h2>
           </NavLink>
           <NavLink
-            className="menu-card-item"
+            className="menu-card-item non-item"
             activeClassName="selectNav"
             to="/off"
           >
@@ -127,20 +129,18 @@ export const DashboardM = () => {
       </div>
       {/* <!-- Left --> */}
       <div className="left">
-         
-      
-      <Switch>
-          <Route path="/admin" component={ DashboardMain}></Route>
-          <Route path="/buy" component={ Buy}></Route>
-          <Route path="/product" component={ Product}></Route>
-          <Route path="/customer" component={ Customer}></Route>
-          <Route path="/support" component={ Customer}></Route>
-          
-
-          </Switch>
-       
+        <Switch>
+          <Route path="/admin" component={DashboardMain}></Route>
+          <Route path="/buy" component={Buy}></Route>
+          <Route path="/product" component={Product}></Route>
+          <Route path="/customer" component={Customer}></Route>
+          <Route path="/support" component={Customer}></Route>
+        </Switch>
       </div>
-      
+
+      <div className="down">
+        
+      </div>
     </div>
   );
 };
