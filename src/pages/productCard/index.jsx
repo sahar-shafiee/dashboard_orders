@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { numberSeparateUtils } from "./../../utils/numberSeparateUtils/numberSeparateUtils";
 
 const ProductCard = ({
-  sm = 6,
-  md = 5,
-  lg = 4,
-  xl = 3,
+  sm = 1,
+  md = 3,
+  lg = 12,
+  xl = 12,
   col,
   linkType,
   _blank = false,
@@ -38,8 +38,8 @@ const ProductCard = ({
   return (
     <div
       className={`${col
-          ? `col-${col}`
-          : `col-sm-${sm} col-md-${md} col-lg-${lg} col-xl-${xl}`
+        ? `col-${col}`
+        : `col-sm-${sm} col-md-${md} col-lg-${lg} col-xl-${xl}`
         } mb-3`}
     >
       <div className="card _product_card _product_card_rounded p-2">

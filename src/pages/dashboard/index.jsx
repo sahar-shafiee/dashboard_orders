@@ -3,12 +3,14 @@ import React from 'react';
 // components
 import { CustomTab } from '../../components';
 import DashboardCard from './dashboardCard';
+import useViewport from '../../components/viewPort';
 
 function Dashboard() {
-    let browserWidth = window.innerWidth;
+    const { width } = useViewport();
+    const breakpoint = 620;
     return (
         <>
-            {browserWidth <= 550 ?
+            {width < breakpoint ?
                 <div className="dashboard">
                     <h3 className="dashboard__h3">سفارش ها</h3>
                     <CustomTab tab={[{
