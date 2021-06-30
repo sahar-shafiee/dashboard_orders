@@ -1,9 +1,12 @@
 import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import one from "../1.jpg";
+import two from "../2.jpg";
+import three from "../3.jpg";
 
 // Import Swiper styles
-import 'swiper/swiper.scss';
+import "swiper/swiper.scss";
 
 export const DashboardMain = () => {
   return (
@@ -43,13 +46,19 @@ export const DashboardMain = () => {
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
+          navigation
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>
+            <img src={one} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={two} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={three} />
+          </SwiperSlide>
         </Swiper>
       </div>
       <div className="left-three">
@@ -68,7 +77,7 @@ export const DashboardMain = () => {
               8
             </h1>
             <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
-            <h4>کالاهای فعال</h4>
+            <h4 style={{ marginTop: "1rem" }}>کالاهای فعال</h4>
           </div>
           <div className="">
             <h1
@@ -81,7 +90,7 @@ export const DashboardMain = () => {
               0
             </h1>
             <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
-            <h4>کالا های در حال اتمام</h4>
+            <h4 style={{ marginTop: "1rem" }}>کالا های در حال اتمام</h4>
           </div>
           <div className="">
             <h1
@@ -94,7 +103,7 @@ export const DashboardMain = () => {
               0
             </h1>
             <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
-            <h4>کالاهای غیرفعال</h4>
+            <h4 style={{ marginTop: "1rem" }}>کالاهای غیرفعال</h4>
           </div>
           <div className="">
             <h1
@@ -107,7 +116,7 @@ export const DashboardMain = () => {
               0
             </h1>
             <h3 style={{ display: " inline-block", color: "black" }}>عدد</h3>
-            <h4>کالاهای ناموجود</h4>
+            <h4 style={{ marginTop: "1rem" }}>کالاهای ناموجود</h4>
           </div>
         </div>
       </div>
@@ -127,7 +136,7 @@ export const DashboardMain = () => {
               8,000,000
             </h1>
             <h3 style={{ display: "inline-block", color: "black" }}>تومان</h3>
-            <h4>فروش هفته جاری</h4>
+            <h4 style={{ marginTop: "1rem" }}>فروش هفته جاری</h4>
           </div>
           <div className="">
             <h1
@@ -140,7 +149,7 @@ export const DashboardMain = () => {
               8,000,000
             </h1>
             <h3 style={{ display: "inline-block", color: "black" }}>تومان</h3>
-            <h4>فروش ماه گذشته</h4>
+            <h4 style={{ marginTop: "1rem" }}>فروش ماه گذشته</h4>
           </div>
           <div className="">
             <h1
@@ -153,7 +162,7 @@ export const DashboardMain = () => {
               8,000,000
             </h1>
             <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
-            <h4>فروش هفته گذشته</h4>
+            <h4 style={{ marginTop: "1rem" }}>فروش هفته گذشته</h4>
           </div>
         </div>
       </div>

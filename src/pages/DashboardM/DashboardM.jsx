@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import "./DashboardM.css";
+import person from "./person.png";
 
 import { DashboardMain } from "./DashBoardMain/DashboardMain";
 
@@ -33,7 +34,9 @@ export const DashboardM = () => {
       {/* <!-- Right  SideBar--> */}
       <div className="Right">
         <section className="info-card">
-          <div className="info-card-pic"></div>
+          <div className="info-card-pic">
+            <div className="info-card-pic-person"></div>
+          </div>
           <div className="info-card">
             <h1
               style={{
@@ -66,7 +69,7 @@ export const DashboardM = () => {
             activeClassName="selectNav"
             to="/admin"
           >
-            <i className="fas fa-home fa-2x"></i>
+            <i className="fas fa-home fa-2x "></i>
             <h2>داشبورد</h2>
           </NavLink>
           <NavLink
@@ -138,7 +141,49 @@ export const DashboardM = () => {
         </Switch>
       </div>
 
-      <div className="down">
+      <div className="menu-mobile">
+        <NavLink
+          className="menu-card-item-menu"
+          activeClassName="selectNav-menu"
+          to="/admin"
+        >
+          <i className="fas fa-home fa-2x " style={{marginTop:"1.2rem"}}></i>
+          <h2 style={{marginTop:"1.2rem"}}>داشبورد</h2>
+        </NavLink>
+        <NavLink
+          className="menu-card-item-menu"
+          activeClassName="selectNav-menu"
+          to="/buy"
+        >
+          <i className="fas fa-shopping-basket fa-2x" style={{marginTop:"1.2rem"}}></i>
+          <h2 style={{marginTop:"1.2rem"}}>سفارشات</h2>
+        </NavLink>
+        <NavLink
+          className="menu-card-item-menu"
+          activeClassName="selectNav-menu"
+          to="/product"
+        >
+          <i className="fas fa-box-open fa-2x" style={{marginTop:"1.2rem"}}></i>
+          <h2 style={{marginTop:"1.2rem"}}>محصولات</h2>
+        </NavLink>
+        <NavLink
+          className="menu-card-item-menu "
+          activeClassName="selectNav-menu"
+          to="/customer"
+        >
+          <i className="fas fa-users fa-2x" style={{marginTop:"1.2rem"}}></i>
+          <h2 style={{marginTop:"1.2rem"}}>لیست مشتریان</h2>
+        </NavLink>
+        <NavLink
+          className="menu-card-item-menu"
+          activeClassName="selectNav-menu"
+          to="/Comments"
+        >
+          <i className="far fa-comment-dots fa-2x" style={{marginTop:"1.2rem"}}></i>
+          <h2 style={{marginTop:"1.2rem"}}>دیدگاه ها</h2>
+        </NavLink>
+       
+        
         
       </div>
     </div>
