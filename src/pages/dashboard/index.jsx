@@ -4,10 +4,14 @@ import React from 'react';
 import { CustomTab } from '../../components';
 import DashboardCard from './dashboardCard';
 import useViewport from '../../components/viewPort';
+// import { getImages } from '../../apis/getImages/getImages';
 
 function Dashboard() {
     const { width } = useViewport();
     const breakpoint = 620;
+    // setTimeout(() => {
+    //     getImages();
+    // }, 1000);
     return (
         <>
             {width < breakpoint ?

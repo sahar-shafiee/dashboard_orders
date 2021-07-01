@@ -5,8 +5,8 @@ import { toastErrorMessage, toastSuccessMessage } from '../../../utils/toastMess
 export const instanceAxiosWithOutToken = Axios.create({
     baseURL: process.env.REACT_APP_BASE_URL,
     headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
-        'Access-Control-Allow-Credentials': 'true',
+        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
+        // 'Access-Control-Allow-Credentials': 'true',
         'Content-Type': ' application/json'
     },
     timeout: 18000,
@@ -20,7 +20,7 @@ export const instanceAxiosWithToken = Axios.create({
     baseURL: process.env.REACT_APP_BASE_URL,
     timeout: 18000,
     headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Authorization': 'Bearer sdfasfd-asfd-12-23'
     },
 });

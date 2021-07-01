@@ -9,6 +9,8 @@ import { store } from './redux/store';
 // components
 import Dashboard from './pages/dashboard';
 import Details from './pages/productDetails/details';
+import Chat from './pages/chat';
+import Chatroom from './pages/chat/chatroom';
 // toast
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,7 +39,9 @@ function Router() {
         <ToastContainer />
         <Switch>
           <Route exact path="/" render={() => <Dashboard />} />
-          <Route path="/product-details" component={Details} />
+          <Route exact path="/product-details" component={Details} />
+          <Route exact path="/login" component={Chat} />
+          <Route exact path="/chatroom" component={Chatroom} />
         </Switch>
       </BrowserRouter>
     </Provider>
