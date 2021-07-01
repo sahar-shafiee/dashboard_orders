@@ -5,22 +5,22 @@ import { CustomBadge, CustomLabel } from '../../components';
 // data
 import { orders } from '../../utils/orders';
 // methods
-// import { ApiRegister } from '../../apis/services/apiRegister/ApiRegister';
+import { ApiRegister } from '../../apis/services/apiRegister/ApiRegister';
 
-function DashboardCard() {
+function OredersUncompleted() {
 
     let [images, setImages] = useState([]);
 
     useEffect(() => {
-        // const _handleRequestApi = async () => {
+        const _handleRequestApi = async () => {
 
-        //     let loadData = null;
-        //     // let dataUrl = '/app/api/get-login-user/';
-        //     let dataUrl = '/api/v1/product-page/details/jbl-wireless-headphones-model-450bt/';
-        //     let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
-        //     setImages(response);//==> output: {}
-        // }
-        // _handleRequestApi();
+            let loadData = null;
+            let dataUrl = '/app/api/v1/factor/shop/Khatun/uncompleted/';
+            let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
+            console.log("res uncom :", response);
+            // setImages(response);//==> output: {}
+        }
+        _handleRequestApi();
 
     }, []);
 
@@ -57,4 +57,4 @@ function DashboardCard() {
     );
 }
 // export
-export default DashboardCard;
+export default OredersUncompleted;

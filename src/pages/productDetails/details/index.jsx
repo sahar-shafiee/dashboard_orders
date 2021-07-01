@@ -20,7 +20,7 @@ const Details = ({ addBag, count }) => {
         const _handleRequestApi = async () => {
 
             let loadData = null;
-            let dataUrl = '/product';
+            let dataUrl = '/api/v1/product-page/details/jbl-wireless-headphones-model-450bt/';
             let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
             setProduct(response);//==> output: {}
         }

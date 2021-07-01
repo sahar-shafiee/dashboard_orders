@@ -7,9 +7,11 @@ export const instanceAxiosWithOutToken = Axios.create({
     headers: {
         // 'Access-Control-Allow-Origin': 'http://localhost:3000',
         // 'Access-Control-Allow-Credentials': 'true',
-        'Content-Type': ' application/json'
+        'Content-Type': ' application/json',
+        'Cookie': 'sessionid=w4rg2uh4so07b8a9mgwo36po3q9jf28t'
     },
     timeout: 18000,
+    credentials: 'include'
 });
 
 // instanceAxiosWithOutToken.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
