@@ -5,6 +5,7 @@ import one from "../1.jpg";
 import two from "../2.jpg";
 import three from "../3.jpg";
 
+
 // Import Swiper styles
 import "swiper/swiper.scss";
 
@@ -17,7 +18,9 @@ export const DashboardMain = () => {
             className="fas fa-cart-plus fa-3x"
             style={{ color: "#007aff" }}
           ></i>
-          <h1>8</h1>
+          <h1> 8
+
+          </h1>
           <h4>سفارش ها تکمیل نشده</h4>
         </div>
         <div className="left-one-1">
@@ -44,12 +47,13 @@ export const DashboardMain = () => {
       </div>
       <div className="left-two">
         <Swiper
-          spaceBetween={50}
+          // spaceBetween={50}
           slidesPerView={1}
           navigation
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
+          
           <SwiperSlide>
             <img src={one} />
           </SwiperSlide>
